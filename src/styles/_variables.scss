@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+:root {
+  /* Core Semantic Colors */
+  --color-primary: hsl(267deg, 83%, 80%);
+  --color-secondary: hsl(227deg, 40%, 72%);
+  --color-accent: hsl(290deg, 70%, 75%);
+  --color-success: hsl(140deg, 45%, 65%);
+  --color-warning: hsl(43deg, 95%, 65%);
+  --color-error: hsl(355deg, 75%, 65%);
+  
+  /* Backgrounds */
+  --color-background: hsl(227deg, 68%, 88%);
+  --color-surface: hsl(227deg, 60%, 96%);
+  --color-elevation-1: hsl(227deg, 60%, 98%);
+  --color-elevation-2: hsl(227deg, 60%, 93%);
+  
+  /* Text */
+  --color-text: hsl(232deg, 23%, 18%);
+  --color-text-muted: hsl(232deg, 15%, 35%);
+  --color-text-inverted: hsl(0deg, 0%, 100%);
+  
+  /* Borders / Lines */
+  --color-border: hsl(230deg, 30%, 70%);
+  --color-divider: hsl(230deg, 30%, 85%);
+
+  /* Buttons */
+  --color-button-primary-bg: var(--color-primary);
+  --color-button-primary-text: var(--color-text-inverted);
+  --color-button-secondary-bg: var(--color-secondary);
+  --color-button-secondary-text: var(--color-text-inverted);
+  
+  /* States */
+  --color-hover: hsl(267deg, 83%, 70%);
+  --color-active: hsl(267deg, 83%, 60%);
+  --color-focus-ring: hsl(267deg, 83%, 80%, 0.6);
+}
+
+.dark-theme {
+  /* Semantic core */
+  --color-primary: hsla(267, 95%, 76%, 1);      /* Lavender */
+  --color-secondary: hsla(220, 13%, 70%, 1);    /* Overlay2 */
+  --color-accent: hsla(189, 43%, 73%, 1);       /* Sky */
+
+  /* Background and surfaces */
+  --color-background: hsla(240, 21%, 15%, 1);   /* Base */
+  --color-surface: hsla(240, 21%, 11%, 1);      /* Mantle */
+  --color-elevation-1: hsla(240, 21%, 18%, 1);  /* Crust */
+  --color-elevation-2: hsla(240, 21%, 22%, 1);  /* Slightly lighter than Crust */
+
+  /* Text colors */
+  --color-foreground: hsla(220, 15%, 85%, 1);   /* Text */
+  --color-text-muted: hsla(220, 15%, 65%, 1);   /* Subtext1 */
+  --color-text-inverted: hsla(0, 0%, 100%, 1);  /* For buttons */
+
+  /* Status */
+  --color-success: hsla(120, 60%, 70%, 1);      /* Green */
+  --color-warning: hsla(35, 80%, 72%, 1);       /* Yellow */
+  --color-error: hsla(0, 80%, 70%, 1);          /* Red */
+
+  /* Border / divider */
+  --color-border: hsla(240, 10%, 30%, 1);       /* From surface border tone */
+  --color-divider: hsla(240, 10%, 40%, 1);
+
+  /* Buttons */
+  --color-button-primary-bg: var(--color-primary);
+  --color-button-primary-text: var(--color-text-inverted);
+  --color-button-secondary-bg: var(--color-secondary);
+  --color-button-secondary-text: var(--color-text-inverted);
+
+  /* States */
+  --color-hover: hsla(267, 95%, 66%, 1);
+  --color-active: hsla(267, 95%, 60%, 1);
+  --color-focus-ring: hsla(267, 95%, 76%, 0.6);
+}
