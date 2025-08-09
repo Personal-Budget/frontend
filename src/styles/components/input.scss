@@ -1,0 +1,34 @@
+
+.input-label {
+  font-weight: 550;
+}
+
+.input-subwrapper-casue-flexbox-is-annoying {
+  width: 100%;
+}
+
+.input-wrapper {
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4px;  
+}
+
+.input-elem {
+  all: unset;
+  width: 94%;
+  background: transparent;
+  border: 1px solid var(--color-focus-ring);
+  border-radius: 8px;
+  padding: 5px 8px;
+  color: var(--color-foreground);
+  transition: all 0.25s ease;
+
+  &:active {
+    border: 1px solid var(--color-active);
+  }
+
+}
+
+
+

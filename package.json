@@ -15,6 +15,7 @@
 		"@sveltejs/adapter-auto": "^6.0.0",
 		"@sveltejs/kit": "^2.22.0",
 		"@sveltejs/vite-plugin-svelte": "^6.0.0",
+		"@tsconfig/svelte": "^5.0.4",
 		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
 		"svelte-preprocess": "^6.0.3",
@@ -23,7 +24,7 @@
 	},
 	"dependencies": {
 		"chart.js": "^4.5.0",
-		"lucide-react": "^0.534.0",
+		"lucide-svelte": "^0.539.0",
 		"sass": "^1.89.2"
 	}
 }

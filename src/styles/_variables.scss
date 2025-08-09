@@ -1,70 +1,80 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+a {
+  color: unset;
+  text-decoration: unset;
+}
+
 * {
+  font-family: "Inter", sans-serif;
+  user-select: none;
+  font-optical-sizing: auto;
   margin: 0;
   padding: 0;
 }
 
-
 :root {
-  /* Core Semantic Colors */
-  --color-primary: hsl(267deg, 83%, 80%);
-  --color-secondary: hsl(227deg, 40%, 72%);
-  --color-accent: hsl(290deg, 70%, 75%);
-  --color-success: hsl(140deg, 45%, 65%);
-  --color-warning: hsl(43deg, 95%, 65%);
-  --color-error: hsl(355deg, 75%, 65%);
-  
+  --color-primary: hsl(231, 97%, 72%);      
+  --color-secondary: hsl(220, 72%, 76%);    
+  --color-accent: hsl(266, 86%, 59%);       
+  --color-success: hsl(115, 54%, 40%);      
+  --color-warning: hsl(34, 77%, 49%);       
+  --color-error: hsl(350, 73%, 46%);        
+
   /* Backgrounds */
-  --color-background: hsl(227deg, 68%, 88%);
-  --color-surface: hsl(227deg, 60%, 96%);
-  --color-elevation-1: hsl(227deg, 60%, 98%);
-  --color-elevation-2: hsl(227deg, 60%, 93%);
-  
+  --color-background: hsl(220, 23%, 95%);   
+  --color-surface: hsl(220, 20%, 98%);      
+  --color-elevation-1: hsl(220, 20%, 100%); 
+  --color-elevation-2: hsl(220, 20%, 92%);  
+
   /* Text */
-  --color-text: hsl(232deg, 23%, 18%);
-  --color-text-muted: hsl(232deg, 15%, 35%);
-  --color-text-inverted: hsl(0deg, 0%, 100%);
+  --color-foreground: hsl(234, 18%, 36%);   
+  --color-text-muted: hsl(233, 12%, 47%);   
+  --color-text-inverted: hsl(0, 0%, 100%); 
+  --color-text-secondary: var(--color-text-inverted); 
   
   /* Borders / Lines */
-  --color-border: hsl(230deg, 30%, 70%);
-  --color-divider: hsl(230deg, 30%, 85%);
+  --color-border: hsl(220, 20%, 82%);       
+  --color-divider: hsl(220, 20%, 90%);      
 
   /* Buttons */
   --color-button-primary-bg: var(--color-primary);
   --color-button-primary-text: var(--color-text-inverted);
   --color-button-secondary-bg: var(--color-secondary);
   --color-button-secondary-text: var(--color-text-inverted);
-  
-  /* States */
-  --color-hover: hsl(267deg, 83%, 70%);
-  --color-active: hsl(267deg, 83%, 60%);
-  --color-focus-ring: hsl(267deg, 83%, 80%, 0.6);
+
+  /* States (derived from primary) */
+  --color-hover: hsl(231, 97%, 64%);        
+  --color-active: hsl(231, 97%, 58%);
+  --color-focus-ring: hsla(231, 97%, 72%, 0.45);
 }
 
 .dark-theme {
-  /* Semantic core */
-  --color-primary: hsla(267, 95%, 76%, 1);      /* Lavender */
-  --color-secondary: hsla(220, 13%, 70%, 1);    /* Overlay2 */
-  --color-accent: hsla(189, 43%, 73%, 1);       /* Sky */
+  /* Core Semantic Colors (Mocha-inspired) */
+  --color-primary: hsl(234, 97%, 86%);      
+  --color-secondary: hsl(217, 92%, 76%);    
+  --color-accent: hsl(267, 84%, 82%);       
+  --color-success: hsl(115, 54%, 76%);      
+  --color-warning: hsl(41, 85%, 82%);       
+  --color-error: hsl(343, 83%, 75%);        
 
-  /* Background and surfaces */
-  --color-background: hsla(240, 21%, 15%, 1);   /* Base */
-  --color-surface: hsla(240, 21%, 11%, 1);      /* Mantle */
-  --color-elevation-1: hsla(240, 21%, 18%, 1);  /* Crust */
-  --color-elevation-2: hsla(240, 21%, 22%, 1);  /* Slightly lighter than Crust */
+ /* Background and surfaces */
+  --color-background: hsl(240, 21%, 15%);   
+  --color-surface: hsl(240, 21%, 11%);      
+  --color-elevation-1: hsl(240, 21%, 18%);  
+  --color-elevation-2: hsl(240, 21%, 22%);  
 
   /* Text colors */
-  --color-foreground: hsla(220, 15%, 85%, 1);   /* Text */
-  --color-text-muted: hsla(220, 15%, 65%, 1);   /* Subtext1 */
-  --color-text-inverted: hsla(0, 0%, 100%, 1);  /* For buttons */
-
-  /* Status */
-  --color-success: hsla(120, 60%, 70%, 1);      /* Green */
-  --color-warning: hsla(35, 80%, 72%, 1);       /* Yellow */
-  --color-error: hsla(0, 80%, 70%, 1);          /* Red */
+  --color-foreground: hsl(226, 64%, 86%);   
+  --color-text-muted: hsl(227, 36%, 80%);   
+  --color-text-inverted: hsl(0, 0%, 100%); 
+  --color-text-secondary: hsl(240, 18%, 15%); 
 
   /* Border / divider */
-  --color-border: hsla(240, 10%, 30%, 1);       /* From surface border tone */
-  --color-divider: hsla(240, 10%, 40%, 1);
+  --color-border: hsl(234, 14%, 23%);       
+  --color-divider: hsl(234, 13%, 31%);      
+
 
   /* Buttons */
   --color-button-primary-bg: var(--color-primary);
@@ -73,7 +83,8 @@
   --color-button-secondary-text: var(--color-text-inverted);
 
   /* States */
-  --color-hover: hsla(267, 95%, 66%, 1);
-  --color-active: hsla(267, 95%, 60%, 1);
-  --color-focus-ring: hsla(267, 95%, 76%, 0.6);
+  --color-hover: hsl(234, 97%, 82%);
+  --color-active: hsl(234, 97%, 78%);
+  --color-focus-ring: hsla(234, 97%, 86%, 0.45);
 }
+

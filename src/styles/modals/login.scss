@@ -1,0 +1,46 @@
+
+/* tiny utility so spans behave like links without resetting your Button styles */
+.linklike {
+  background: none;
+  border: none;
+  padding: 0;
+  color: var(--color-primary);
+  cursor: pointer;
+  font: inherit;
+}
+.linklike:hover {
+  color: var(--color-hover);
+}
+
+.subtitle {
+  margin-top: 8px;
+  text-align: center;
+  color: var(--color-text-muted);
+
+  .subtitle-emphasis {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+}
+
+
+.wazzupbeijing {
+  display: flex;
+  justify-content: center;
+  margin: 20px 8px;
+}
+
+
+.forgor {
+  margin-top: 4px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.input-box {
+  display: flex;
+  flex-flow: column nowrap; 
+  gap: 16px;
+  margin-bottom: 28px;
+}

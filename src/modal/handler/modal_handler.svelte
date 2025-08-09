@@ -20,10 +20,16 @@
   }
 </script>
 
-{#if Component}
-  <svelte:component this={Component} {...componentProps} on:close={closeModal}>
-    {#if ChildrenComponent}
-      <svelte:component this={ChildrenComponent} />
-    {/if}
-  </svelte:component>
-{/if}
+{#key $modal.id}
+  {#if Component}
+    <svelte:component
+      this={Component}
+      {...componentProps}
+      on:close={closeModal}
+    >
+      {#if ChildrenComponent}
+        <svelte:component this={ChildrenComponent} />
+      {/if}
+    </svelte:component>
+  {/if}
+{/key}

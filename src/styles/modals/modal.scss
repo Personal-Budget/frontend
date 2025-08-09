@@ -7,11 +7,33 @@
   z-index: 999;
 }
 
+
+.xl {
+  min-width: 1500px;
+}
+
+.lg {
+  min-width: 1200px;
+}
+
+.md {
+  min-width: 900px;
+}
+
+.sm {
+  min-width: 600px;
+}
+
+.xs {
+  min-width: 320px;
+}
+
+
+
 .modal-root {
-  background: var(--color-surface);
+  background: var(--color-elevation-2);
   border-radius: 1rem;
   padding: 1.5rem;
-  min-width: 320px;
   max-width: 90%;
   max-height: 90%;
   backdrop-filter: blur(12px);

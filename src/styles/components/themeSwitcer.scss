@@ -1,0 +1,25 @@
+.switcher {
+  cursor: pointer;
+  background-color: var(--color-primary); /* more visible default */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* stronger shadow for visibility */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    background-color: var(--color-hover);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+  }
+}
+
+.switcher-component {
+  color: var(--color-text-secondary); /* always contrasts with primary background */
+  transition: color 0.25s ease;
+}
