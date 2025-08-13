@@ -4,9 +4,18 @@
   import "../../styles/landing/navbar/base.scss";
   import Button from "../../components/button.svelte";
   import ThemeButton from "../../components/LightDarkThemeSwitcher.svelte";
+  import { goto } from "$app/navigation";
+
+  const isLoggedIn = $state(true);
+
+  const send_to_dashboard = () => goto("/dashboard");
 
   const toggle_login_modal = () => {
     toggleModal("login");
+  };
+
+  const toggle_register_modal = () => {
+    toggleModal("register");
   };
 </script>
 
@@ -25,9 +34,15 @@
     </div>
 
     <div class="navbar_elem">
-      <ThemeButton />
-      <Button type="primary" onClick={toggle_login_modal}>Login</Button>
-      <Button type="secondary">Register</Button>
+      <ThemeButton type={"simple"} />
+      {#if isLoggedIn}
+        <Button type="primary" onClick={send_to_dashboard}>Dashboard</Button>
+      {:else}
+        <Button type="primary" onClick={toggle_login_modal}>Login</Button>
+        <Button type="secondary" onClick={toggle_register_modal}
+          >Register</Button
+        >
+      {/if}
     </div>
   </div>
 </div>

@@ -2,7 +2,7 @@
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
 		"baseUrl": ".",
-		"types": ["svelte"],
+		"types": ["svelte", "vite/client", "@sveltejs/kit"],
 		"paths": {
 			"$lib/*": ["src/lib/*"],
 			"$components/*": ["src/components/*"]

@@ -3,5 +3,6 @@ import LoginContent from "../../../modal/dialogs/login.svelte";
 import { registerModal } from "../registry";
 
 export function registerAllModals() {
-  registerModal("login", Modal, { title: "" }, LoginContent);
+	registerModal("login", Modal, { title: "" }, LoginContent);
+	registerModal("register", Modal, { title: "", register: true }, LoginContent);
 }

@@ -11,6 +11,8 @@
     verification_code_after_reg: boolean;
   }
 
+  const { ModalProps } = $props();
+
   const default_triggers: LoginTriggerInterface = {
     reset: false,
     register: false,
@@ -28,6 +30,12 @@
     login_triggers.verification_code_after_reg = false;
     login_triggers[view] = true;
   };
+
+  $effect(() => {
+    if (ModalProps.register) {
+      setView("register");
+    }
+  });
 
   // submit handlers (stub these with real logic later)
   const submitLogin = () => {
@@ -72,7 +80,7 @@
       </div>
     </div>
 
-    <Button type="primary" style="text-align:center" on:click={submitLogin}>
+    <Button type="primary" style="text-align:center" onClick={submitLogin}>
       Submit
     </Button>
 

@@ -4,11 +4,12 @@
   import { Sun, Moon } from "lucide-svelte";
   import { type Writable } from "svelte/store";
   import { toggleTheme } from "../util/theming/switch";
-  import { onMount } from "svelte";
 
   const themeState = localStorageState("theme", "light") as Writable<
     "dark" | "light"
   >;
+
+  const { type = "simple" }: { type: "extended" | "simple" } = $props();
 
   const IconMatch = {
     dark: Sun,
@@ -16,40 +17,39 @@
   };
 
   // keep DOM class in sync on first load
-  $: {
+  $effect(() => {
     if (typeof document !== "undefined") {
       document?.documentElement?.classList.toggle(
         "dark-theme",
         $themeState === "dark",
       );
     }
-  }
+  });
 </script>
 
-<div class="switcher">
+<div
+  class={`${type === "extended" ? "switcher-extended" : "switcher"}`}
+  aria-label="switch-theme"
+  tabindex="0"
+  role="button"
+  onkeypress={() => {}}
+  onclick={(e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if ($themeState == "dark") {
+      themeState.set("light");
+      toggleTheme();
+    } else {
+      themeState.set("dark");
+      toggleTheme();
+    }
+  }}
+>
   {#key $themeState}
     {#if $themeState === "dark"}
-      <Sun
-        onclick={(e: any) => {
-          e.preventDefault();
-          e.stopPropagation();
-          themeState.set("light");
-          toggleTheme();
-        }}
-        class="switcher-component"
-        aria-label="Switch to light"
-      />
+      <Sun class="switcher-component" aria-label="Switch to light" />
     {:else}
-      <Moon
-        onclick={(e: any) => {
-          e.preventDefault();
-          e.stopPropagation();
-          themeState.set("dark");
-          toggleTheme();
-        }}
-        class="switcher-component"
-        aria-label="Switch to dark"
-      />
+      <Moon class="switcher-component" aria-label="Switch to dark" />
     {/if}
   {/key}
 </div>

@@ -1,0 +1,15 @@
+.main-wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  background-color: var(--color-background);
+}
+
+
+.mainContentWrapper {
+  color: var(--color-foreground); 
+}
+
+
+

@@ -1,0 +1,116 @@
+.sidebarCompInner {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  gap: 16px;
+  cursor: pointer;
+  align-items: center;
+  transition: all 0.2s ease;
+  padding: 12px;
+  
+  border-radius: 12px;
+  overflow-x: hidden;
+
+  &:hover {
+    transform: translateX(20px);
+    background-color: var(--color-hover);
+    color: var(--color-text-secondary);
+  }
+}
+
+.sidebarCompInner.sideBarSelected {
+  transform: translateX(20px);
+  background-color: var(--color-hover);
+  color: var(--color-text-secondary);
+}
+
+.logo_dashboard {
+  text-transform: uppercase;
+  font-weight: 750;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
+  padding: 16px;
+  cursor: pointer;
+  color: var(--color-foreground);
+}
+
+.SideBarElemRoot {
+  min-height: 100%; 
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  border-right: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-foreground);
+  width: 20vw;
+}
+
+
+// oh the regrets
+.sideBarBottom *::not(svg) {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: var(--color-foreground);
+  border-radius: 12px;
+  overflow: hidden;
+  
+  &:hover {
+    color: var(--color-hover);
+  }
+}
+
+.sideBarBottom {
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap; 
+  border-top: 1px solid var(--color-border);
+  justify-content: space-around;
+  align-items: flex-start;
+  min-height: 8vh;
+  padding: 8px;
+}
+
+.SideBarMainPages {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.SideBarPageWrapper {
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap; 
+  gap: 8px;
+}
+
+.SideBarMainBottomButton {
+  margin: 0 6px 20px 6px;
+}
+
+.sidebarActionLogout {
+  margin-top: 8px;
+  overflow: hidden;
+  border-radius: 12px; 
+  background-color: var(--color-error) !important;
+  padding: 8px;
+  color: var(--color-text-secondary) !important;
+
+}
+
+.sideBarAction {
+  width: 95%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: start; 
+  gap: 12px;
+  color: var(--color-foreground);
+  cursor: pointer;
+  
+  &:hover {
+    color: var(--color-hover);
+  }
+}

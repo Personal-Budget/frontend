@@ -28,7 +28,7 @@
       on:close={closeModal}
     >
       {#if ChildrenComponent}
-        <svelte:component this={ChildrenComponent} />
+        <svelte:component this={ChildrenComponent} {...componentProps} />
       {/if}
     </svelte:component>
   {/if}
